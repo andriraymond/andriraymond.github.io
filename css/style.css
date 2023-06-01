@@ -1,0 +1,789 @@
+    /* --------------------- */
+/* -----   BODY    ----- */
+/* --------------------- */
+html, body {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Poppins';
+    color: #252525;
+    background-color: gray;
+}
+
+/* --------------------- */
+/* ----- FONT-COLOR----- */
+/* --------------------- */
+div, span, li, a {
+    color: #252525;
+}
+/* --------------------- */
+/* -----/FONT-COLOR----- */
+/* --------------------- */
+
+
+
+/* --------------------- */
+/* ----- FONT-SIZE ----- */
+/* --------------------- */
+.fs-10 { font-size: 10px; }
+.fs-11 { font-size: 11px; }
+.fs-12 { font-size: 12px; }
+.fs-13 { font-size: 13px; }
+.fs-14 { font-size: 14px; }
+.fs-15 { font-size: 15px; }
+.fs-16 { font-size: 16px; }
+.fs-20 { font-size: 20px; }
+.fs-22 { font-size: 22px; }
+.fs-25 { font-size: 25px; }
+.fs-35 { font-size: 35px; }
+.fs-55 { font-size: 55px; }
+/* --------------------- */
+/* -----/FONT-SIZE ----- */
+/* --------------------- */
+
+
+
+/* --------------------- */
+/* ----- FONT-WG   ----- */
+/* --------------------- */
+.fw-500 { font-weight: 500; }
+.fw-600 { font-weight: 600; }
+.fw-700 { font-weight: 700; }
+.fw-800 { font-weight: 800; }
+.fw-900 { font-weight: 900; }
+.fw-1k2  { font-weight: bolder;}
+.fw-1k {
+    font-family: "Poppins", sans-serif;
+  font-weight: 800; /* Atur font-weight yang diinginkan */
+  text-shadow: 0 0 1px #000, 0 0 1px #000;
+  }
+/* --------------------- */
+/* -----/FONT-WH   ----- */
+/* --------------------- */
+
+
+
+/* --------------------- */
+/* -----   NAVBAR  ----- */
+/* --------------------- */
+.navbar{
+    min-height: 55px;
+    max-height: 60px;
+    height: 12vh;
+    padding: 0;
+    position: sticky;
+    top: 0;
+    /* border: 2px solid orange; */
+}
+
+.navbar {
+    padding: 0 60px;
+}
+
+.navbar-brand {
+    text-transform: uppercase;
+    display: block; /* Membuat element dapat diubahh */
+}
+
+.navbar-nav ~ img {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.navbar-nav .nav-item .nav-link{
+    padding: 0px 20px;
+    display: flex;
+    height: 32px;
+    justify-content: center;
+    align-items: center;
+    background-color: #F8F9FA;
+    display: flex;
+    align-items: center;
+}
+
+.navbar-nav .nav-item .nav-link:hover, .navbar-nav .nav-item.active{
+    background-color: #252525;
+    color: #FFFFFF;
+    .nav-link {
+        color: #FFFFFF;
+        background-color: #252525;
+    }
+}
+/* --------------------- */
+/* -----  /NAVBAR  ----- */
+/* --------------------- */
+
+
+
+/* --------------------- */
+/* -----  LOADING  ----- */
+/* --------------------- */
+.loading-spinner {
+    z-index: 4;
+    width: 100px;
+    height: 100px;
+    border: 6px solid red; /* Color of the spinner border */
+    border-top: 4px solid #3498db; /* Color of the spinner's animated part */
+    border-radius: 50%;
+    animation: spin 3s linear;
+    /* animation: spin 3s linear infinite ; */
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+  @keyframes spin {
+    0% { transform: translate(-50%, -50%) rotate(0deg); }
+    100% { transform: translate(-50%, -50%) rotate(360deg); }
+}
+/* --------------------- */
+/* ----- /LOADING  ----- */
+/* --------------------- */
+
+
+
+/* --------------------- */
+/* -----  CONTENT  ----- */
+/* --------------------- */
+.container-content {
+    /* border: 1px solid red; */
+    height: 85vh;
+    margin: 0 60px;
+    /* max-height: 768px; */
+    /* overflow: scroll;
+    overflow: hidden; */
+    display: flex;
+    align-items : center;
+}
+
+/* --------------------- */
+/* ----CONTENT-LEFT----- */
+/* --------------------- */
+.container.content-left {
+    width: 40%;
+    display: flex;
+    justify-content: center;
+}
+.ray-img-section {
+    display: flex;
+    justify-content: center;
+}
+/* --------------------- */
+/* ----/CONTENT-LEFT---- */
+/* --------------------- */
+
+
+
+/* --------------------- */
+/* ----CONTENT-RIGHT---- */
+/* --------------------- */
+.container.content-right {
+    width: 60%;
+    /* height: 80vh; */
+}
+.ray-home-name {
+    font-weight: bolder;
+    text-shadow: 0 0 1px #252525, 0 0 1px #252525;
+}
+.line {
+        display: inline-block;
+        height: 4px;
+        width: 60px;
+        background-color: #252525;
+}
+.enthusiast {
+    margin-bottom: 18px;
+}
+
+.main-content {
+    display: block;
+    /* border: 1px solid blue; */
+    padding: 5px;
+    margin-top: 5px;
+    width: 100%;
+}
+
+.ray-home {
+    display: flex;
+    align-items: center;
+}
+/* --------------------- */
+/* ------- ABOUT ------- */
+/* --------------------- */
+.ray-about-content {
+    display: flex;
+    align-items: center;
+    letter-spacing: 6px;
+    text-transform: uppercase;
+    margin-bottom: 50px;
+    padding-top: 50px;
+}
+.ray-about-description {
+    width: auto;
+    display: flex;
+    gap: 25px;
+    justify-content: space-between;
+}
+.about-line {
+    display: inline-block;
+    height: 2px;
+    width: 100%;
+    background-color: #7d7789;
+    margin-left: 20px;
+}
+
+.ray-about-left, .ray-about-right {
+    font-size: 15px;
+}
+
+.ray-about-left { width: 45%;}
+.ray-about-right { width: 45%;}
+
+.ray-about-right ul {
+    list-style: none;
+    padding-left: 5px;
+    width: auto;
+    align: justify;
+    text-align: left;
+}
+.ray-about-right li {
+    margin-bottom: 8px;
+}
+.about-col1 {
+    display: inline-block;
+    min-width: 65px;
+    font-size: 15px;
+    font-weight: 600;
+    margin: 0;
+    align: justify;
+}
+
+.about-col2 {
+    display: inline-block;
+    min-width: 15px;
+    font-size: 15px;
+    margin: 0;
+    align: justify;
+}
+
+.about-col3 {
+    font-size: 14px;
+    margin: 0;
+    align: justify;
+}
+
+/* Secondary */
+.ray-about-detail {
+    /* display: flex;
+    align-items: center;
+    letter-spacing: 6px;
+    text-transform: uppercase;
+    margin-bottom: 50px;
+    width: 100%;
+    padding-top: 60px;
+    clear: both;
+    justify-content: space-between;
+    gap: 25px; */
+    padding-top: 60px;
+    display: flex;
+    width: auto;
+    gap: 25px;
+    justify-content: space-between;
+}
+
+.ray-detail-left{ width: 45%;}
+.ray-detail-right {width: 45%;}
+
+.ray-detail-content {
+    width: 100%;
+    height: auto;
+    clear: both;
+    float: left;
+    /* overflow: hidden; */
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+    letter-spacing: 5px;
+    text-transform: uppercase;
+}
+
+.ray-detail-content span {
+    width: -webkit-fill-available;
+}
+
+.about-line {
+    display: inline-block;
+    height: 2px;
+    width: 100%;
+    background-color: #7d7789;
+    margin-left: 20px;
+}
+
+.list-about-detail li {
+    letter-spacing: normal;
+    text-transform: none;
+    margin: 0 0 8px 0;
+}
+
+.list-about-detail ul {
+    list-style-type: "→ ";
+    margin-bottom: 50px;
+}
+
+.ray-detail-right ul {
+    width: auto;
+    /* padding-left: 10px; */
+}
+
+/* --------------------- */
+/* -------/ABOUT ------- */
+/* --------------------- */
+
+/* --------------------- */
+/* ---/CONTENT-RIGHT---- */
+/* --------------------- */
+
+
+
+/* ---------------------- */
+/* ----- BTN BUTTON ----- */
+/* ---------------------- */
+.btn.button {
+    border: 3px solid#252525;
+    color: #252525;
+    padding: 10px 28px 8px 28px;
+    align-items: center;
+}
+.btn.button:hover, .btn.button.active {
+    border: 3px solid #252525;
+    background-color: #252525;
+    color: #FFFFFF;
+}
+/* ---------------------- */
+/* -----/BTN BUTTON ----- */
+/* ---------------------- */
+
+
+
+/* --------------------- */
+/* -----  FOOTER   ----- */
+/* --------------------- */
+.ray-footer {
+    display: flex;
+    flex-wrap: wrap;
+    position: absolute;
+    bottom: 0px;
+    width: 100%;
+    /* border: 2px solid orangered; */
+}
+
+.ray-footer {
+    height: 12vh;
+    min-height: 50px;
+    max-height: 60px;
+    z-index: 2;
+    background-color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 5px 60px;
+    .social {
+        display: flex;
+        flex-wrap: wrap;
+        padding: 0;
+    }
+    .copyright p {
+        margin: 0;
+        padding: 0;
+        font-size: 15px;
+        font-weight: 500;
+    }
+    .social li {
+        list-style: none;
+    }
+    .social ul {
+        display: flex;
+        gap: 15px;
+        padding: 0;
+        margin: 0;
+    }
+}
+
+.social i, .social a {
+    cursor: pointer;
+    font-size: 16px;
+    /* width: 15px; */
+    
+}
+
+/* ---------------------- */
+/* --CSS SCREEN SMALLER-- */
+/* ---------------------- */
+
+/* 01. CSS For screen smaller than 768 */
+@media (max-width: 768px) {
+    .navbar {
+        padding: 0 10px;
+    }
+
+    .navbar-brand {
+        display: flex;
+        align-items: center;
+        height: 60px;
+    }
+    
+    .navbar-nav{
+        width: 150px;
+        position: absolute;
+        right: 0;
+        padding-top: 50px;
+        display: flex;
+        background-color: #F8F9FA;
+        height: 100vh;
+        align-items: flex-end;
+    }
+    .nav-foto {
+        padding: 0 15px 50px 0;
+    }
+    .nav-item {
+        margin-bottom: 7px;
+        font-weight: 500;
+        color: #252525;
+        background-color: #FFFFFF;
+    }
+    .ray-nav-label {
+        margin: 20px 20px 0px 10px;
+    }
+
+    .nav-social ul {
+        display: flex;
+        list-style: none;
+        gap: 10px;
+        margin-bottom: 10px;
+    }
+    
+    .nav-social{
+        display: flex;
+        flex-wrap: nowrap;
+        justify-content: space-between;
+    }
+
+    .navbar-nav .nav-item .nav-link {
+        font-weight: 500;
+    }
+    
+    .navbar-nav .nav-item .nav-link:hover, .navbar-nav .nav-item.active{
+    background-color: #F8F9FA;
+    color: #252525;
+    font-weight: 600;
+    .nav-link {
+        color: #252525;
+        background-color: #F8F9FA;
+        font-weight: 600;
+        }
+    }
+    .container-content {
+        margin: 0 10px;
+        /* padding: 0 10px; */
+    }
+
+    .container.content-right {
+        width: 100vh;
+    }
+    .btn.button {
+        padding: 10px 28px 8px 28px;
+        align-items: center;        
+        border: 3px solid #252525;
+        background-color: #252525;
+        color: #FFFFFF;
+    }
+    .ray-about-content {
+        display: flex;
+        align-items: center;
+        letter-spacing: 6px;
+        text-transform: uppercase;
+    }
+    .ray-about-description {
+        width: auto;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 14px;
+    }
+    .ray-about-right ul {
+        padding-left: 0px;
+    }
+    .ray-about-right li {
+        margin-bottom: 5px;
+    }
+    .ray-about-left, .ray-about-right {
+        width: auto;
+    }
+}
+
+/* 02. CSS For screen between 768px and 991px */
+@media (min-width: 768px) and (max-width: 991px) {
+    .navbar {
+        padding: 0 10px;
+    }
+    .navbar-brand {
+        display: flex;
+        align-items: center;
+        height: 60px;
+    }
+    .navbar-nav{
+        /* width: 150px; */
+        position: absolute;
+        right: 0;
+        padding-top: 50px;
+        display: flex;
+        background-color: #F8F9FA;
+        height: 100vh;
+        align-items: flex-end;
+    }
+    .nav-foto {
+        padding: 0 15px 50px 0;
+    }
+    .nav-item {
+        margin-bottom: 7px;
+        font-weight: 500;
+    }
+
+    .ray-nav-label {
+        margin: 20px 20px 0px 10px;
+    }
+    .nav-social ul {
+        display: flex;
+        list-style: none;
+        gap: 10px;
+        margin-bottom: 10px;
+    }
+    
+    .nav-social{
+        display: flex;
+        flex-wrap: nowrap;
+        justify-content: space-between;
+    }
+    
+    .container-content {
+        margin: 0 10px;
+        /* padding: 0 10px; */
+    }
+
+    .container.content-right {
+        width: 100vh;
+    }
+    .ray-about-description {
+        width: auto;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 14px;
+    }
+    
+    .ray-about-left, .ray-about-right {
+        width: auto;
+    }
+
+    .btn.button {
+        padding: 10px 28px 8px 28px;
+        align-items: center;        
+        border: 3px solid #252525;
+        background-color: #252525;
+        color: #FFFFFF;
+    }
+}
+
+/* 03. CSS For screen between 768px and 991px */
+@media (min-width: 1000px) and (max-width: 1050px) {
+    /* .ray-footer {
+        display: flex !important;
+    } */
+    .container-content {
+        margin: 0 30px;
+    }
+    #container-left {
+        display: block;
+    }
+    .ray-about-description {
+        width: auto;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 14px;
+    }
+    
+    .ray-about-left, .ray-about-right {
+        width: auto;
+    }
+}
+
+/* 04. CSS For screen Diatas 1050px*/
+@media (min-width: 1030px){
+    .ray-footer {
+        display: flex !important;
+    }
+}
+/* ---------------------- */
+/* --/CSS SCREEN SMALLER--*/
+/* ---------------------- */
+
+/* --------------------- */
+/* -----  /FOOTER  ----- */
+/* --------------------- */
+
+
+
+
+/* --------------------- */
+/* ----- /CONTENT  ----- */
+/* --------------------- */
+
+
+
+/* --------------------- */
+/* -----   /BODY   ----- */
+/* --------------------- */
+
+
+.hidden-scrollbar {
+    /* background-color:red; */
+    /* border:2px solid #666; */
+    color:white;  
+    overflow:hidden;
+    text-align:justify;    
+  }
+  
+  .hidden-scrollbar .inner {
+    height:80vh;
+    overflow:auto;
+    margin:5px -300px 5px 5px;
+    padding-right:300px;   /* Samakan dengan besar margin negatif */
+  }
+
+
+
+  /* ini baru */
+  .contact-line {
+    display: inline-block;
+    height: 2px;
+    width: 100%;
+    background-color: #7d7789;
+    margin-left: 20px;
+}
+.ray-contact-content {
+    display: flex;
+    align-items: center;
+    letter-spacing: 6px;
+    text-transform: uppercase;
+    border: 1px solid purple;
+    /* margin-top: 90px; */
+}
+
+.ray-contact-left{
+    width: 42%;
+    font-weight: 500;
+    font-size: 15px;
+    line-height: 1.7;
+}
+.ray-contact-right {
+    width: 56%;
+    font-weight: 500;
+    font-size: 15px;
+    line-height: 1.7;
+}
+.ray-contact-right li {
+    margin-bottom: 8px;
+}
+.ray-contact-right ul, .ray-contact-description ul {
+    list-style: none;
+    width: 100%;
+    margin-bottom: 30px;
+    /* margin-left: 40px; */
+}
+
+.ray-contact-description ul {
+    display: flex;
+    /* flex-wrap: wrap; */
+    padding: 0;
+    width: 55vw;   
+    gap: 30px;
+}
+
+.ray-contact-description li {
+    width: 33%;
+}
+
+.list-contact {
+    list-style: none;
+    height: 98px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+    padding: 20px 10px;
+    border: 1px solid #252525;
+    .list-contact i, i, svg {
+        width: 18px;
+        height: 18px;
+        margin-bottom: 10px;
+    }
+    .fa-phone-alt {
+        transform: rotate(90deg);
+        height: 18px;
+        width: 18px;
+    }
+}
+
+.list-contact span {
+    font-size: 15px;
+    font-weight: 500;
+}
+
+input {
+    height: 44px;
+    margin-bottom: 30px 0;
+}
+
+input, button, textarea {
+    border-radius: 0;
+    font-size: 13px;
+    min-width: auto;
+    letter-spacing: 1.4px;
+    line-height: 1.6;
+    padding: 10px;
+    vertical-align: middle;
+    display: flex;
+    border: 1px solid #252525;
+    #salah {
+
+        border: 1px solid red;
+    }
+}
+
+input, textarea {
+    margin-bottom: 30px;
+    /* margin: 10px 0; */
+}
+
+textarea {
+    margin-bottom: 30px !important;
+}
+
+
+.form {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    width: 100%;
+    gap: 2%;
+}
+.left {
+    width: 48%;
+    /* margin-right: 20px; */
+}
+
+.right {
+    width: 50%;
+}
