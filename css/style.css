@@ -1,4 +1,4 @@
-    /* --------------------- */
+/* --------------------- */
 /* -----   BODY    ----- */
 /* --------------------- */
 html, body {
@@ -12,6 +12,7 @@ body {
     /* background-color: whitesmoke; */
     background-color: gainsboro;
 }
+
 
 /* --------------------- */
 /* ----- FONT-COLOR----- */
@@ -79,16 +80,13 @@ div, span, li, a {
     /* border: 2px solid orange; */
     box-shadow: 0 1px 2px 0 rgba(0,0,0,.2);
 }
-
 .navbar {
     padding: 0 60px;
 }
-
 .navbar-brand {
     text-transform: uppercase;
     display: block; /* Membuat element dapat diubahh */
 }
-
 .navbar-nav ~ img {
     display: flex;
     justify-content: center;
@@ -104,7 +102,6 @@ div, span, li, a {
     display: flex;
     align-items: center;
 }
-
 .navbar-nav .nav-item .nav-link:hover, .navbar-nav .nav-item.active{
     background-color: #252525;
     color: #FFFFFF;
@@ -160,6 +157,8 @@ div, span, li, a {
     display: flex;
     align-items : center;
 }
+
+
 
 /* --------------------- */
 /* ----CONTENT-LEFT----- */
@@ -340,10 +339,88 @@ div, span, li, a {
     width: auto;
     /* padding-left: 10px; */
 }
-
 /* --------------------- */
 /* -------/ABOUT ------- */
 /* --------------------- */
+
+
+/* --------------------- */
+/* ----/PORTOFOLIO------ */
+/* --------------------- */
+
+/* Write Your Code Here  */
+
+/* --------------------- */
+/* ----/PORTOFOLIO------ */
+/* --------------------- */
+
+
+
+/* --------------------- */
+/* ------CONTACT ------- */
+/* --------------------- */
+.ray-contact-content {
+    display: flex;
+    align-items: center;
+    letter-spacing: 6px;
+    text-transform: uppercase;
+    margin-bottom: 50px;
+    padding-top: 50px;
+}
+.contact-line {
+    display: inline-block;
+    height: 2px;
+    width: 100%;
+    background-color: #7d7789;
+    margin-left: 20px;
+}
+.ray-contact-description {
+    width: auto;
+    gap: 25px;
+    justify-content: space-between;
+}
+.ray-contact-description ul {
+    list-style: none;
+    display: flex;
+    padding: 0;
+    width: auto;
+    /* gap: 30px; */
+}
+.ray-contact-content li {
+    width: 33%;
+}
+.list-contact {
+    height: 98px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+    padding: 20px 20px;
+    border: 1px solid #252525;
+    .list-contact i, svg {
+        width: 18px;
+        height: 18px;
+        margin-bottom: 10px;
+    }
+    .fa-phone-alt {
+        transform: rotate(90deg);
+        width: 18px;
+        height: 18px;
+    }
+}
+.fas {
+    margin: 0;
+    padding: 0;
+    margin-bottom: 10px;
+}
+
+
+/* --------------------- */
+/* ------/CONTACT------- */
+/* --------------------- */
+
+
 
 /* --------------------- */
 /* ---/CONTENT-RIGHT---- */
@@ -438,7 +515,7 @@ div, span, li, a {
     text-align:justify;    
   }
   
-  .hidden-scrollbar .inner {
+.hidden-scrollbar .inner {
     height:80vh;
     overflow:auto;
     margin:5px -300px 5px 5px;
@@ -671,128 +748,3 @@ div, span, li, a {
 
 
 /*============================================================================*/
-
-/* ini baru */
-  .contact-line {
-    display: inline-block;
-    height: 2px;
-    width: 100%;
-    background-color: #7d7789;
-    margin-left: 20px;
-}
-.ray-contact-content {
-    display: flex;
-    align-items: center;
-    letter-spacing: 6px;
-    text-transform: uppercase;
-    border: 1px solid purple;
-    /* margin-top: 90px; */
-}
-
-.ray-contact-left{
-    width: 42%;
-    font-weight: 500;
-    font-size: 15px;
-    line-height: 1.7;
-}
-.ray-contact-right {
-    width: 56%;
-    font-weight: 500;
-    font-size: 15px;
-    line-height: 1.7;
-}
-.ray-contact-right li {
-    margin-bottom: 8px;
-}
-.ray-contact-right ul, .ray-contact-description ul {
-    list-style: none;
-    width: 100%;
-    margin-bottom: 30px;
-    /* margin-left: 40px; */
-}
-
-.ray-contact-description ul {
-    display: flex;
-    /* flex-wrap: wrap; */
-    padding: 0;
-    width: 55vw;   
-    gap: 30px;
-}
-
-.ray-contact-description li {
-    width: 33%;
-}
-
-.list-contact {
-    list-style: none;
-    height: 98px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    gap: 5px;
-    padding: 20px 10px;
-    border: 1px solid #252525;
-    .list-contact i, i, svg {
-        width: 18px;
-        height: 18px;
-        margin-bottom: 10px;
-    }
-    .fa-phone-alt {
-        transform: rotate(90deg);
-        height: 18px;
-        width: 18px;
-    }
-}
-
-.list-contact span {
-    font-size: 15px;
-    font-weight: 500;
-}
-
-input {
-    height: 44px;
-    margin-bottom: 30px 0;
-}
-
-input, button, textarea {
-    border-radius: 0;
-    font-size: 13px;
-    min-width: auto;
-    letter-spacing: 1.4px;
-    line-height: 1.6;
-    padding: 10px;
-    vertical-align: middle;
-    display: flex;
-    border: 1px solid #252525;
-    #salah {
-
-        border: 1px solid red;
-    }
-}
-
-input, textarea {
-    margin-bottom: 30px;
-    /* margin: 10px 0; */
-}
-
-textarea {
-    margin-bottom: 30px !important;
-}
-
-
-.form {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    width: 100%;
-    gap: 2%;
-}
-.left {
-    width: 48%;
-    /* margin-right: 20px; */
-}
-
-.right {
-    width: 50%;
-}
