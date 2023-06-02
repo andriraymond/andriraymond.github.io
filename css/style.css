@@ -9,7 +9,8 @@ html, body {
 body {
     font-family: 'Poppins';
     color: #252525;
-    background-color: transparent;
+    /* background-color: whitesmoke; */
+    background-color: gainsboro;
 }
 
 /* --------------------- */
@@ -76,6 +77,7 @@ div, span, li, a {
     position: sticky;
     top: 0;
     /* border: 2px solid orange; */
+    box-shadow: 0 1px 2px 0 rgba(0,0,0,.2);
 }
 
 .navbar {
@@ -186,7 +188,8 @@ div, span, li, a {
 }
 .ray-home-name {
     font-weight: bolder;
-    text-shadow: 0 0 1px #252525, 0 0 1px #252525;
+    text-shadow: 0 0 1px #838b99, 0 0 1px  #252525;
+    text-align: justify;
 }
 .line {
         display: inline-block;
@@ -378,6 +381,7 @@ div, span, li, a {
     bottom: 0px;
     width: 100%;
     /* border: 2px solid orangered; */
+    /* border-top: 1px solid #838b99; */
 }
 
 .ray-footer {
@@ -418,6 +422,32 @@ div, span, li, a {
     /* width: 15px; */
     
 }
+/* --------------------- */
+/* -----  /FOOTER  ----- */
+/* --------------------- */
+
+
+/* --------------------- */
+/* ------  OTHER  ------ */
+/* --------------------- */
+.hidden-scrollbar {
+    /* background-color:red; */
+    /* border:2px solid #666; */
+    color:white;  
+    overflow:hidden;
+    text-align:justify;    
+  }
+  
+  .hidden-scrollbar .inner {
+    height:80vh;
+    overflow:auto;
+    margin:5px -300px 5px 5px;
+    padding-right:300px;   /* Samakan dengan besar margin negatif */
+  }
+/* --------------------- */
+/* ------  OTHER  ------ */
+/* --------------------- */
+
 
 /* ---------------------- */
 /* --CSS SCREEN SMALLER-- */
@@ -594,7 +624,6 @@ div, span, li, a {
         color: #FFFFFF;
     }
 }
-
 /* 03. CSS For screen between 768px and 991px */
 @media (min-width: 1000px) and (max-width: 1050px) {
     /* .ray-footer {
@@ -628,11 +657,6 @@ div, span, li, a {
 /* --/CSS SCREEN SMALLER--*/
 /* ---------------------- */
 
-/* --------------------- */
-/* -----  /FOOTER  ----- */
-/* --------------------- */
-
-
 
 
 /* --------------------- */
@@ -646,24 +670,9 @@ div, span, li, a {
 /* --------------------- */
 
 
-.hidden-scrollbar {
-    /* background-color:red; */
-    /* border:2px solid #666; */
-    color:white;  
-    overflow:hidden;
-    text-align:justify;    
-  }
-  
-  .hidden-scrollbar .inner {
-    height:80vh;
-    overflow:auto;
-    margin:5px -300px 5px 5px;
-    padding-right:300px;   /* Samakan dengan besar margin negatif */
-  }
+/*============================================================================*/
 
-
-
-  /* ini baru */
+/* ini baru */
   .contact-line {
     display: inline-block;
     height: 2px;
