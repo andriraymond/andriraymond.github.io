@@ -20,8 +20,18 @@ function changeText() {
 }
 
 // Memanggil fungsi saat halaman di muat dan saat ukuran layar berubah
+
+/* ---------------------- */
+/* ------- LOADIND ------ */
+/* ---------------------- */
 window.onload = changeText;
 window.onresize = changeText;
+
+window.addEventListener("load", function() {
+    var spinner = document.querySelector(".loading-spinner");
+    spinner.style.display = "none";
+  });
+
 
 /* ---------------------- */
 /* ----/NAVBAR - NAV ---- */
