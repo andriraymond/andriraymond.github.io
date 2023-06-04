@@ -110,6 +110,9 @@ div, span, li, a {
         background-color: #252525;
     }
 }
+a.noclick, li.nonclick {
+    pointer-events: none;
+}
 /* --------------------- */
 /* -----  /NAVBAR  ----- */
 /* --------------------- */
@@ -332,6 +335,7 @@ div, span, li, a {
 
 .list-about-detail ul {
     list-style-type: "→ ";
+    
     margin-bottom: 50px;
 }
 
@@ -366,6 +370,7 @@ div, span, li, a {
     text-transform: uppercase;
     margin-bottom: 50px;
     padding-top: 50px;
+    width: 100%;
 }
 .contact-line {
     display: inline-block;
@@ -374,34 +379,29 @@ div, span, li, a {
     background-color: #7d7789;
     margin-left: 20px;
 }
+.ray-contact-row {
+    gap: 20px;
+    display: flex;
+    /* jika di bawah resolusi maka ini diubah menjadi grid */
+    flex-wrap: wrap;
+    margin-bottom: 50px;
+}
 .ray-contact-description {
-    width: auto;
-    gap: 25px;
-    justify-content: space-between;
+    width: 100%;
 }
-.ray-contact-description ul {
-    list-style: none;
-    display: flex;
-    padding: 0;
-    width: auto;
-    /* gap: 30px; */
-}
-.ray-contact-content li {
-    width: 33%;
-}
-.list-contact {
-    height: 98px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    gap: 5px;
-    padding: 20px 20px;
+.ray-col {
     border: 1px solid #252525;
+    padding: 20px 10px;
+    max-height: 98px;
+    height: 100vh;
+    display: grid;
+    justify-content: center;
+    justify-items: center;
+    align-items: center;
+    z-index: -1;
     .list-contact i, svg {
         width: 18px;
         height: 18px;
-        margin-bottom: 10px;
     }
     .fa-phone-alt {
         transform: rotate(90deg);
@@ -409,12 +409,50 @@ div, span, li, a {
         height: 18px;
     }
 }
-.fas {
-    margin: 0;
-    padding: 0;
-    margin-bottom: 10px;
+
+input, textarea {
+    width: 100%;
+    border-radius: 0;
+    font-size: 13px;
+    min-width: auto;
+    letter-spacing: 1.4px;
+    line-height: 1.6;
+    padding: 10px;
+    vertical-align: middle;
+    display: flex;
+    border: 1px solid #252525;
+    #salah {
+        border: 1px solid red;
+    }
 }
 
+input, textarea {
+    margin-bottom: 30px;
+}
+.first ul {
+    padding: 0;
+    width: 100%;
+}
+.first li, .first ul {
+    list-style: none;
+    width: 100%;
+}
+.form {
+    display: flex;
+    /* flex-wrap: wrap; */
+    justify-content: space-between;
+    width: 100%;
+    gap: 2%;
+    margin-bottom: 50px;
+}
+.left {
+    width: 48%;
+    margin-right: 20px;
+}
+
+.right {
+    width: 50%;
+}
 
 /* --------------------- */
 /* ------/CONTACT------- */
@@ -441,6 +479,27 @@ div, span, li, a {
     border: 3px solid #252525;
     background-color: #252525;
     color: #FFFFFF;
+}
+.button-submit{
+    border: 3px solid#252525;
+    padding: 10px 28px 8px 28px;
+    background-color: #252525;
+    text-align: center;
+    #send_message {
+        color: white;
+        text-decoration: none;
+    }
+}
+
+.button-submit:is(:hover, :active) {
+    border: 3px solid #252525;
+    background-color: #FFFFFF;
+    font-weight: 600;
+    text-align: center;
+    #send_message {
+        color: #252525;
+        
+    }
 }
 /* ---------------------- */
 /* -----/BTN BUTTON ----- */
@@ -520,6 +579,7 @@ div, span, li, a {
     overflow:auto;
     margin:5px -300px 5px 5px;
     padding-right:300px;   /* Samakan dengan besar margin negatif */
+    padding-bottom: 50px;
   }
 /* --------------------- */
 /* ------  OTHER  ------ */
@@ -627,6 +687,18 @@ div, span, li, a {
     }
     .ray-about-left, .ray-about-right {
         width: auto;
+    }
+    .list-contact {
+        font-size: 14px !important;
+    }
+    .ray-contact-row {
+        display: grid;
+    }
+    .form {
+        display: grid;
+        .left, right{
+            width: 100%
+        };
     }
 }
 
