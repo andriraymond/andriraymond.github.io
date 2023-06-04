@@ -145,10 +145,13 @@ function onFormSubmit(e) {
     // console.log(name.val()) // console.log(email.val()) // console.log(phone.val()) // console.log(company.val()) // console.log(message.val())s
     
     // FUNCTIONS UNTUK PENGECEKAN FIELD INPUTAN - NAMA
+    let formOn = 0;
+
     if(name.val().length > 2 && name.val().trim() !== ""){
         console.log("Nama Valid");
         // Menampilkan Hijau ke field Inputan
         InpName.style.border = "2px solid #64C348";
+        formOn = formOn + 1 ;
     }
     else if(name.val() == ""){
         console.log("Nama Tidak Valid")
@@ -163,8 +166,9 @@ function onFormSubmit(e) {
 
     // FUNCTIONS UNTUK PENGECEKAN FIELD INPUTAN - NAMA
     if(email.val().includes("@") && email.val().includes('.com') || email.val().includes('.net') || email.val().includes('.co.id')){
-        console.log("Email Vakud");
+        console.log("Email Valid");
         InpEmail.style.border = "2px solid #64C348";
+        formOn = formOn + 1 ;
     }
     else {
         console.log("Email Tidak Valid");
@@ -173,11 +177,12 @@ function onFormSubmit(e) {
 
     // FUNCTIONS UNTUK PENGECEKAN FIELD INPUTAN - PHONE
     if(phone.val().length < 7 || phone.val().length > 14){
-        console.log("Nomor Valid")
+        console.log("Nomor HP Tidak Valid")
         InpPhone.style.border = "2px solid red";
     }else {
-        console.log("Inputan Nomor telah  sesuai")
+        console.log("Nomor HP Valid")
         InpPhone.style.border = "2px solid #64C348";
+        formOn = formOn + 1 ;
     }
 
     // FUNCTIONS UNTUK PENGECEKAN FIELD INPUTAN - COMPANY
@@ -187,6 +192,7 @@ function onFormSubmit(e) {
     }else {
         console.log("Company Valid")
         InpComp.style.border = "2px solid #64C348";
+        formOn = formOn + 1 ;
     }
 
     // FUNCTIONS UNTUK PENGECEKAN FIELD INPUTAN - MESSAGE
@@ -196,24 +202,21 @@ function onFormSubmit(e) {
     }else {
         console.log("Message Valid")
         InpMessage.style.border = "2px solid #64C348";
+        formOn = formOn + 1 ;
+    }
+    console.log(formOn)
+
+    if(formOn == "5"){
+        alert("Untuk Saat, Ini Fungsi Ini Belum Tersedia");
+        console.log("Mantul Pak Eko")
+    }else {
+        console.log("Error Form");
     }
 }
 
+
 // Trigger Submit Button
 $("#send_message").click(onFormSubmit)
-
-// FUNCTION SEND EMAILS
-
-// function SendEmailRAY() {
-//     var emailAddress     = 'andriraymondo@gmail.com';
-//     var subject          = 'Email from Portofolio';
-//     var body             = 
-
-//     var mailtoLink       =  'mailto:' + emailAddress + '?subject=' + encodeURIComponent(subject) + '&body=' + encodeURIComponent(body);
-//     window.location.href = mailtoLink;
-// }
-
-// $("#contact-form").click(onFormSubmit)
 
 /* ---------------------- */
 /* ------ /CONTENT ------ */
