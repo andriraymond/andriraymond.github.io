@@ -6,6 +6,9 @@ const navLinks = document.querySelectorAll('div ul .nav-item');
 // Ambil semua elemen div dengan kelas "content"
 const contentDivs = document.querySelectorAll('div .main-content');
 
+// Ambil elemen sidebar menu 
+const contentNav = document.querySelectorAll('div .navbar-collapse');
+
 // Tambahkan event listener pada setiap elemen a
 navLinks.forEach(link => {
     link.addEventListener('click', function (event) {
@@ -14,13 +17,17 @@ navLinks.forEach(link => {
         // Hapus kelas aktif dari semua tautan
         navLinks.forEach(link => {
             link.classList.remove('active');
-
         });
 
         // Hapus kelas d-none dari semua div dengan kelas "content"
         contentDivs.forEach(div => {
             div.classList.remove('d-none');
         });
+
+        // contentNav
+        contentNav.forEach(div => {
+            div.classList.remove('show');
+        })
 
         // Tambahkan kelas aktif ke tautan yang diklik
         link.classList.add('active');
