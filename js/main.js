@@ -126,6 +126,10 @@ function openWhatsAppRAY() {
 }
 
 // Function to Check Form - Contact Form
+
+const form = document.getElementById('contact-form');
+const button = document.getElementById('send_message');
+
 function onFormSubmit(e) {
     e.preventDefault()
     const name      = $("#name")
@@ -214,7 +218,12 @@ function onFormSubmit(e) {
     console.log(formOn)
 
     if(formOn == "5"){
-        alert("Untuk Saat, Ini Fungsi Ini Belum Tersedia");
+        button.addEventListener('click', function(event){
+            event.preventDefault();
+
+            form.submit();
+        });
+        // alert("Untuk Saat, Ini Fungsi Ini Belum Tersedia");
         console.log("Mantul Pak Eko")
     }else {
         console.log("Error Form");
