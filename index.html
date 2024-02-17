@@ -53,7 +53,7 @@
         <!-- -----  HEADER  ----- -->
         <nav class="navbar navbar-expand-lg navbar-light bg-light">
             <!-- -----  LOGO    ----- -->
-            <a class="navbar-brand fs-25 fw-800" id="title" href="#RAY">Andri Reimondo Tamba</a>
+            <a class="navbar-brand fs-25 fw-800" id="title" href="/ ">Andri Reimondo Tamba</a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
@@ -62,10 +62,10 @@
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav ms-auto">
                     <!-- -----  MENU    ----- -->
-                    <img class="nav-foto d-lg-none" src="assets/images/ray-img.png" style="width: 110px;" alt="">
+                    <img class="nav-foto d-lg-none" src="assets/images/ray-img.webp" style="width: 110px;" alt="">
                     <li class="nav-item fs-15 fw-600 active" id="home"><a class="nav-link" href="#Home">Home<span class="sr-only">(current)</span></a></li>
                     <li class="nav-item fs-15 fw-600" id="about"><a class="nav-link" href="#About">About</a></li>
-                    <li class="nav-item fs-15 fw-600 noclick disable" id="about" onclick="openPortoRAY()"><a class="nav-link noclick" href="#Portofolio">Portofolio</a></li>
+                    <li class="nav-item fs-15 fw-600 noclick disable" id="portofolio" onclick="openPortoRAY()"><a class="nav-link noclick" href="#Portofolio">Portofolio</a></li>
                     <li class="nav-item fs-15 fw-600" id="contact"><a class="nav-link" href="#Contact">Contact</a></li>
                     <div class="ray-nav-label d-lg-none">
                         <!-- -----  SOCIAL  ----- -->
@@ -100,7 +100,7 @@
             <div class="container content-left d-none d-lg-block" id="content-left">
                 <div class="section-img">
                     <div class="ray-img-section">
-                        <img class="d-none d-lg-block" id="foto-content" src="assets/images/ray-img.png" style="width: 378px;" alt="">
+                        <img class="d-none d-lg-block" id="foto-content" src="assets/images/ray-img.webp" style="width: 378px;" alt="">
                     </div>
                 </div>
             </div>
@@ -405,6 +405,85 @@
         <!-- -----  /MGC CURSOR ----- -->
 
     </div>
+
+        <!-- Disable Inspect Element -->
+        <script language="JavaScript">
+            // $(document).bind("contextmenu",function(e) {
+            //     e.preventDefault();
+            // });
+            // $(document).keydown(function(e){
+            //     if(e.ctrlKey && (e.which === 83)){
+            //         e.preventDefault();
+            //         return false;
+            //     }if (e.ctrlKey && e.shiftKey && ( e.which === 73)){
+            //         e.preventDefault();
+            //         return false;
+            //     }
+            // });
+            var message="Function Disabled! We apologize, but this functionality is currently unavailable on the website";
+            function clickdsb(){
+                if (event.button==2){
+                    alert(message);
+                    return false;
+                }
+            }
+            function clickbsb(e){
+                if (document.layers||document.getElementById&&!document.all){
+                    if (e.which==2||e.which==3){
+                        alert(message);
+                        return false;
+                    }
+                }
+            }
+            if (document.layers){
+                document.captureEvents(Event.MOUSEDOWN);
+                document.onmousedown=clickbsb;
+            }
+            else if (document.all&&!document.getElementById){
+                document.onmousedown=clickdsb;
+            }
+
+            document.oncontextmenu=new Function("alert(message);return false");
+
+            document.addEventListener('keydown', function(e) {
+            // Mendeteksi jika tombol Ctrl dan tombol 'S' ditekan bersamaan
+            if (e.ctrlKey && e.key === 's') {
+                e.preventDefault(); // Mencegah perilaku default dari browser (misalnya: menyimpan halaman)
+            }
+            if (e.ctrlKey && e.key === 'u') {
+                e.preventDefault(); // Mencegah perilaku default dari browser (misalnya: menyimpan halaman)
+            }
+            if (e.ctrlKey && e.shiftKey && e.key === 'J'){
+                // Mencegah perilaku default dari browser
+                e.preventDefault();
+                e.stopPropagation();
+            }
+            if (e.ctrlKey && e.shiftKey && e.key === 'I'){
+                // Mencegah perilaku default dari browser
+                e.preventDefault();
+                e.stopPropagation();
+            }
+            if (e.ctrlKey && e.shiftKey && e.key === 'C'){
+                // Mencegah perilaku default dari browser
+                e.preventDefault();
+                e.stopPropagation();
+            }
+            if (e.ctrlKey && e.shiftKey && e.key === 'U'){
+                // Mencegah perilaku default dari browser
+                e.preventDefault();
+                e.stopPropagation();
+            }
+            if (e.ctrlKey && e.key === 'U'){
+                // Mencegah perilaku default dari browser
+                e.preventDefault();
+                e.stopPropagation();
+            }
+
+});
+            </script>
+        <!-- End Disable Inspect Element -->
+
+
     <!-- ----- /ALL CONTENT ----- -->
     
 </body>

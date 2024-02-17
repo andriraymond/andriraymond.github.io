@@ -175,6 +175,13 @@ a.noclick, li.nonclick {
     display: flex;
     justify-content: center;
 }
+
+.ray-img-section:hover {
+    z-index: inherit;
+    z-index: -9;
+    zoom: 105%;
+    filter: grayscale(100%);
+}
 /* --------------------- */
 /* ----/CONTENT-LEFT---- */
 /* --------------------- */
