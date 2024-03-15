@@ -2,20 +2,20 @@
 
 <!-- -----  MENGUBAH URL     ----- -->
 <script>
-    if (location.pathname === '/index.html') {
-      location.replace('/');
-    }
+  if (location.pathname === "/index.html") {
+    location.replace("/");
+  }
 </script>
 <!-- -----  /MENGUBAH URL    ----- -->
 
-<html lang="en" data-bs-theme="dark">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name ="author" content="Andri Reimondo Tamba">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<html lang="en" data-bs-theme="light">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="author" content="Andri Reimondo Tamba" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <link href="favicon.ico" rel="icon">
+    <link href="favicon.ico" rel="icon" />
     <!-- <link rel="icon" href="favicon.ico" type="image/x-icon" /> -->
 
     <!-- -----  MENGUBAH TITLE  ----- -->
@@ -23,171 +23,642 @@
     <!-- -----  /MENGUBAH TITLE ----- -->
 
     <!-- -----  MENGUBAH ICON   ----- -->
-    <link rel="icon" href="assets/icon/ray-icon.png" type="image/png">
+    <link rel="icon" href="assets/icon/ray-icon.png" type="image/png" />
     <!-- -----  /MENGUBAH ICON  ----- -->
 
     <!-- -----  BOOTSTRAP CDN   ----- -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
-    <link rel="stylesheet" href="css/style.css">
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css"
+      integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+      crossorigin="anonymous" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ"
+      crossorigin="anonymous" />
+    <link rel="stylesheet" href="css/style.css" />
     <!-- -----  /BOOTSTRAP CND  ----- -->
 
     <!-- -----  IMPORT FONT     ----- -->
-    <link href='https://fonts.googleapis.com/css?family=Poppins' rel='stylesheet'>
+    <link
+      href="https://fonts.googleapis.com/css?family=Poppins"
+      rel="stylesheet" />
     <!-- -----  /IMPORT FONT----- -->
 
     <!-- Import source Icon -->
     <!-- <script src='https://kit.fontawesome.com/a076d05399.js' crossorigin='anonymous'></script> Tidak bisa jadi diganti CDN fontawesome -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+      integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer" />
+  </head>
+  <body>
+    <!-- -----  LOADING     ----- -->
+    <div class="loading-spinner"></div>
+    <!-- -----  /LOADING    ----- -->
 
-</head>
-<body>
-    <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
-        <ol class="carousel-indicators">
-            <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
-            <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
-            <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
-        </ol>
-        <div class="carousel-inner">
-            <div class="carousel-item active">
-                <img class="d-block w-100" src="https://azlogistik-live.s3.ap-southeast-3.amazonaws.com/content-bf/assets/promo/Iklan-4-1-03-v2.png" alt="First slide">
+    <!-- -----  ALL CONTENT ----- -->
+    <div
+      class="ray-all-content"
+      data-magic-cursor="show"
+      data-enter="flipInX"
+      data-exit="">
+      <!-- -----  HEADER  ----- -->
+      <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <!-- -----  LOGO    ----- -->
+        <a class="navbar-brand fs-25 fw-800" id="title" href="/ "
+          >Andri Reimondo Tamba</a
+        >
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-toggle="collapse"
+          data-target="#navbarNav"
+          aria-controls="navbarNav"
+          aria-expanded="false"
+          aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <!-- -----  /LOGO   ----- -->
+
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ms-auto">
+            <!-- -----  MENU    ----- -->
+            <img
+              class="nav-foto d-lg-none"
+              src="assets/images/ray-img.webp"
+              style="width: 110px"
+              alt="" />
+            <li class="nav-item fs-15 fw-600 active" id="home">
+              <a class="nav-link" href="#Home"
+                >Home<span class="sr-only">(current)</span></a
+              >
+            </li>
+            <li class="nav-item fs-15 fw-600" id="about">
+              <a class="nav-link" href="#About">About</a>
+            </li>
+            <li
+              class="nav-item fs-15 fw-600 noclick disable"
+              id="portofolio"
+              onclick="openPortoRAY()">
+              <a class="nav-link noclick" href="#Portofolio">Portofolio</a>
+            </li>
+            <li class="nav-item fs-15 fw-600" id="contact">
+              <a class="nav-link" href="#Contact">Contact</a>
+            </li>
+            <div class="ray-nav-label d-lg-none">
+              <!-- -----  SOCIAL  ----- -->
+              <div class="nav-social">
+                <ul>
+                  <li>
+                    <a
+                      href="https://www.medium.com/@andriraymond"
+                      target="_blank"
+                      ><i class="fab fa-medium-m"></i
+                    ></a>
+                  </li>
+                  <li>
+                    <a
+                      href="https://www.linkedin.com/in/andriraymond/"
+                      target="_blank"
+                      ><i class="fab fa-linkedin"></i
+                    ></a>
+                  </li>
+                  <li>
+                    <a
+                      href="https://www.github.com/andriraymond"
+                      target="_blank"
+                      ><i class="fab fa-github"></i
+                    ></a>
+                  </li>
+                  <li>
+                    <a href="http://www.linktr.ee/andriraymond" target="_blank"
+                      ><i class="fa fa-share-alt"></i
+                    ></a>
+                  </li>
+                </ul>
+              </div>
+              <!-- -----  /SOCIAL ----- -->
+
+              <!-- -----  COPYRIGHT   ----- -->
+              <div class="nav-copyright" style="text-align: end">
+                <p class="fs-12">Copyright © 2024</p>
+              </div>
+              <!-- -----  /COPYRIGHT  ----- -->
             </div>
-            <div class="carousel-item">
-                <img class="d-block w-100" src="https://azlogistik-live.s3.ap-southeast-3.amazonaws.com/content-bf/assets/promo/Iklan-White-Border-02-v2.png" alt="Second slide">
-            </div>
-            <div class="carousel-item">
-                <img class="d-block w-100" src="https://azlogistik-live.s3.ap-southeast-3.amazonaws.com/content-bf/assets/promo/muatmuat-ads-NEW-01-v4.jpg" alt="Third slide">
-            </div>
+            <!-- -----  /FOOTER ----- -->
+
+            <!-- -----  /MENU  ----- -->
+          </ul>
         </div>
-        <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
-            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-            <span class="sr-only">Previous</span>
-        </a>
-        <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
-            <span class="carousel-control-next-icon" aria-hidden="true"></span>
-            <span class="sr-only">Next</span>
-        </a>
+      </nav>
+      <!-- -----  /HEADER ----- -->
+
+      <!-- -----  CONTENT ----- -->
+      <div class="container-content" id="container">
+        <!-- -----  LEFT    ----- -->
+        <div class="container content-left d-none d-lg-block" id="content-left">
+          <div class="section-img">
+            <div class="ray-img-section">
+              <img
+                class="d-none d-lg-block"
+                id="foto-content"
+                src="assets/images/ray-img.webp"
+                style="width: 378px"
+                alt="" />
+            </div>
+          </div>
+        </div>
+        <!-- -----  /LEFT   ----- -->
+
+        <!-- -----  RIGHT   ----- -->
+        <div
+          class="container content-right hidden-scrollbar"
+          id="content-right">
+          <!-- -----  HOME   ----- -->
+          <div class="main-content" id="home">
+            <div class="ray-home inner">
+              <div class="ray-home-content">
+                <h3 class="ray-home-name fs-55 fw-800">Andri Reimondo Tamba</h3>
+                <span class="line"></span>
+                <h1 class="enthusiast">
+                  <span class="headline loading-bar">
+                    <span class="begin fs-22">I am a</span>
+                    <span class="wording-wrapper">
+                      <b class="web-dev fs-22">Technology Enthusiast</b>
+                      <b class="d-none fs-22">Quality Control</b>
+                      <b class="d-none fs-22">Web Developer</b>
+                    </span>
+                    <!-- <span class="end fs-22">in Indonesia</span> -->
+                  </span>
+                </h1>
+                <!--    Location File Resume   -->
+                <a
+                  href="assets/pdf/CV_ANDRI REIMONDO TAMBA.pdf"
+                  class="btn button fs-16 fw-600"
+                  target="_blank"
+                  download=""
+                  >Download My Resume</a
+                >
+                <!--    /Location File Resume  -->
+              </div>
+            </div>
+          </div>
+          <!-- -----  /HOME  ----- -->
+
+          <!-- -----  ABOUT  ----- -->
+          <div class="main-content d-none" id="about">
+            <!-- -----  ABOUT-CONTENT  ----- -->
+            <div class="ray-about inner">
+              <!-- First About Content -->
+              <div class="ray-about-content">
+                <span class="fw-800">About</span>
+                <span class="about-line"></span>
+              </div>
+
+              <div class="ray-about-description">
+                <div class="ray-about-left">
+                  <p align="justify">
+                    Hello! My name is
+                    <strong> Andri Reimondo Tamba. </strong>
+                    I have experience in Quality Assurance and I am currently
+                    looking to switch my career to become a Software
+                    Engineering. During my internship, I gained hands-on
+                    experience as a Web Developer.
+                  </p>
+                  <p align="justify">
+                    I have recently completed my education in Information
+                    Systems at Del Institute of Technology, and I have gained
+                    valuable experience working on various Web Development
+                    projects. Through these experiences, I have acquired the
+                    skills and knowledge necessary to ensure the success of any
+                    project.
+                  </p>
+                </div>
+                <div class="ray-about-right">
+                  <ul>
+                    <li>
+                      <span class="about-col1">Name</span>
+                      <span class="about-col2">:</span>
+                      <span class="about-col3">Andri Reimondo Tamba</span>
+                    </li>
+                    <li>
+                      <span class="about-col1">Address</span>
+                      <span class="about-col2">:</span>
+                      <span class="about-col3">Surabaya, Indonesa</span>
+                    </li>
+                    <li>
+                      <span class="about-col1">Degree </span>
+                      <span class="about-col2">:</span>
+                      <span class="about-col3"
+                        >Bachelor (Del Institute Of Technology)</span
+                      >
+                    </li>
+                    <li>
+                      <span class="about-col1">Email</span>
+                      <span class="about-col2">:</span>
+                      <span class="about-col3">andriraymond98@gmail.com</span>
+                    </li>
+                    <li>
+                      <span class="about-col1">Phone</span>
+                      <span class="about-col2">:</span>
+                      <span class="about-col3">081375696792</span>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+              <!--/First About Content -->
+
+              <!-- Second About Content -->
+              <div class="ray-about-detail">
+                <div class="ray-detail-left">
+                  <div class="ray-detail-content">
+                    <span class="fw-800">Hard Skill</span>
+                    <span class="about-line"></span>
+                  </div>
+                  <div class="list-about-detail fs-15">
+                    <ul>
+                      <li>HTML, CSS, Javascript</li>
+                      <li>Laravel Framework</li>
+                      <li>Katalon Studio Test Automation</li>
+                      <li>Python Selenium WebDriver</li>
+                    </ul>
+                  </div>
+                </div>
+
+                <div class="ray-detail-right">
+                  <div class="ray-detail-content">
+                    <span class="fw-800">Soft Skill</span>
+                    <span class="about-line"></span>
+                  </div>
+                  <div class="list-about-detail fs-15">
+                    <ul>
+                      <li>Collaboration</li>
+                      <li>Adaption</li>
+                      <li>Communication</li>
+                      <li>Descipline</li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+              <!--/Second About Content -->
+
+              <!-- Third About Content -->
+              <div class="ray-about-detail">
+                <div class="ray-detail-left">
+                  <div class="ray-detail-content">
+                    <span class="fw-800">Education</span>
+                    <span class="about-line"></span>
+                  </div>
+                  <div class="list-about-detail fs-15">
+                    <ul>
+                      <li>Del Institute of Technology</li>
+                    </ul>
+                  </div>
+                </div>
+
+                <div class="ray-detail-right">
+                  <div class="ray-detail-content">
+                    <span class="fw-800">Experience</span>
+                    <span class="about-line"></span>
+                  </div>
+                  <div class="list-about-detail fs-15">
+                    <ul>
+                      <li>Quality Control Software</li>
+                      <li>Internship | Web Developer</li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+              <!--/Third About Content -->
+            </div>
+            <!-- -----  /ABOUT-CONTENT ----- -->
+          </div>
+          <!-- -----  /ABOUT ----- -->
+
+          <!-- -----  PORTOFOLIO  ----- -->
+          <div class="main-content# d-none" id="#portofolio"></div>
+          <!-- -----  /PORTOFOLIO ----- -->
+
+          <!-- -----  CONTACT  ----- -->
+          <div class="main-content d-none" id="contact">
+            <div class="ray-contact inner">
+              <div class="ray-contact-content">
+                <span class="fw-800">Contact</span>
+                <span class="contact-line"></span>
+              </div>
+              <div class="ray-contact-description fs-15">
+                <div class="container-sm text-center">
+                  <div class="ray-contact-row row">
+                    <div class="ray-col col">
+                      <i
+                        class="fas fa-map-marker-alt"
+                        style="font-size: 18px"></i>
+                      <span onclick="openLocationRAY()"
+                        >Surabaya, Indonesia</span
+                      >
+                    </div>
+                    <div class="ray-col col">
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        xmlns:xlink="http://www.w3.org/1999/xlink"
+                        version="1.1"
+                        id="Capa_1"
+                        x="0px"
+                        y="0px"
+                        width="550.795px"
+                        height="550.795px"
+                        viewBox="0 0 550.795 550.795"
+                        style="enable-background: new 0 0 550.795 550.795"
+                        xml:space="preserve"
+                        class="svg replaced-svg">
+                        <g>
+                          <g>
+                            <path
+                              d="M501.613,491.782c12.381,0,23.109-4.088,32.229-12.16L377.793,323.567c-3.744,2.681-7.373,5.288-10.801,7.767    c-11.678,8.604-21.156,15.318-28.434,20.129c-7.277,4.822-16.959,9.737-29.045,14.755c-12.094,5.024-23.361,7.528-33.813,7.528    h-0.306h-0.306c-10.453,0-21.72-2.503-33.813-7.528c-12.093-5.018-21.775-9.933-29.045-14.755    c-7.277-4.811-16.75-11.524-28.434-20.129c-3.256-2.387-6.867-5.006-10.771-7.809L16.946,479.622    c9.119,8.072,19.854,12.16,32.234,12.16H501.613z"></path>
+                            <path
+                              d="M31.047,225.299C19.37,217.514,9.015,208.598,0,198.555V435.98l137.541-137.541    C110.025,279.229,74.572,254.877,31.047,225.299z"></path>
+                            <path
+                              d="M520.059,225.299c-41.865,28.336-77.447,52.73-106.75,73.195l137.486,137.492V198.555    C541.98,208.396,531.736,217.306,520.059,225.299z"></path>
+                            <path
+                              d="M501.613,59.013H49.181c-15.784,0-27.919,5.33-36.42,15.979C4.253,85.646,0.006,98.97,0.006,114.949    c0,12.907,5.636,26.892,16.903,41.959c11.267,15.061,23.256,26.891,35.961,35.496c6.965,4.921,27.969,19.523,63.012,43.801    c18.917,13.109,35.368,24.535,49.505,34.395c12.05,8.396,22.442,15.667,31.022,21.701c0.985,0.691,2.534,1.799,4.59,3.269    c2.215,1.591,5.018,3.61,8.476,6.107c6.659,4.816,12.191,8.709,16.597,11.683c4.4,2.975,9.731,6.298,15.985,9.988    c6.249,3.685,12.143,6.456,17.675,8.299c5.533,1.842,10.655,2.766,15.367,2.766h0.306h0.306c4.711,0,9.834-0.924,15.368-2.766    c5.531-1.843,11.42-4.608,17.674-8.299c6.248-3.69,11.572-7.02,15.986-9.988c4.406-2.974,9.938-6.866,16.598-11.683    c3.451-2.497,6.254-4.517,8.469-6.102c2.057-1.476,3.605-2.577,4.596-3.274c6.684-4.651,17.1-11.892,31.104-21.616    c25.482-17.705,63.01-43.764,112.742-78.281c14.957-10.447,27.453-23.054,37.496-37.803c10.025-14.749,15.051-30.22,15.051-46.408    c0-13.525-4.873-25.098-14.598-34.737C526.461,63.829,514.932,59.013,501.613,59.013z"></path>
+                          </g>
+                        </g>
+                      </svg>
+                      <span onclick="openEmailRAY()"
+                        >andriraymondo@gmail.com</span
+                      >
+                    </div>
+                    <div class="ray-col col">
+                      <i class="fas fa-phone-alt"></i>
+                      <span onclick="openWhatsAppRAY()">+62 813 7569 6792</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- -----  CONTACT-DESCRIPTION-LEFT  ----- -->
+              <div class="form">
+                <div class="left">
+                  <div class="fields">
+                    <form
+                      action="send_offers.php"
+                      method="post"
+                      class="contact-form"
+                      id="contact-form">
+                      <div class="first">
+                        <ul>
+                          <li>
+                            <input
+                              id="name"
+                              name="name"
+                              type="text"
+                              placeholder="Your Name"
+                              autocomplete="off"
+                              value
+                              required />
+                          </li>
+                          <li>
+                            <input
+                              id="email"
+                              name="email"
+                              type="email"
+                              placeholder="Your Email"
+                              autocomplete="off"
+                              value
+                              required />
+                          </li>
+                          <li>
+                            <input
+                              id="phone"
+                              name="phone"
+                              type="number"
+                              placeholder="Your Number Phone"
+                              autocomplete="off"
+                              value
+                              required />
+                          </li>
+                          <li>
+                            <input
+                              id="company"
+                              name="company"
+                              type="text"
+                              placeholder="Your Company"
+                              autocomplete="off"
+                              value
+                              required />
+                          </li>
+                        </ul>
+                      </div>
+                      <div class="last">
+                        <textarea
+                          id="message"
+                          name="message"
+                          placeholder="Your Message"></textarea>
+                      </div>
+                      <div class="button-submit">
+                        <a id="send_message" href="#" type="submit"
+                          >Send Message</a
+                        >
+                        <!-- <a id="send_message" href="#" onclick="document.getElementById('contact_form').submit()" type="submit">Send Message</a> -->
+                        <!-- <a id="send_message" type="submit" value="Kirim">Send Message</a> -->
+                      </div>
+                    </form>
+                  </div>
+                </div>
+                <!-- ----- /CONTACT-DESCRIPTION-LEFT  ----- -->
+
+                <div class="right">
+                  <div class="text-location">
+                    <iframe
+                      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3957.8081845163083!2d112.73110797487699!3d-7.262658392744148!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2dd7f95ea8f61177%3A0x503d2825f291eb8b!2sJl.%20Kedung%20Rukem%20IV%20No.28%2C%20RT.006%2FRW.07%2C%20Kedungdoro%2C%20Kec.%20Tegalsari%2C%20Surabaya%2C%20Jawa%20Timur%2060261!5e0!3m2!1sid!2sid!4v1684330704343!5m2!1sid!2sid"
+                      width="350"
+                      height="375"
+                      style="border: 0"
+                      allowfullscreen=""
+                      loading="lazy"
+                      referrerpolicy="no-referrer-when-downgrade"></iframe>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!--                             
+                        <div class="ray-contact-content">
+                            <span>Contact</span>
+                            <span class="contact-line"></span>
+                        </div>
+                        
+                        <div class="ray-contact-desctiption">
+                            <ul>
+                                <li>
+                                    <div class="list-contact">
+                                        
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+
+                        <div class="ray-contact-detail">
+
+                        </div>
+
+                    </div>
+                </div> -->
+          <!-- -----  /CONTACT  ----- -->
+        </div>
+        <!-- -----  /RIGHT  ----- -->
+      </div>
+      <!-- -----  /CONTENT----- -->
+
+      <!-- -----  FOOTER  ----- -->
+      <footer></footer>
+      <div class="ray-footer d-none d-lg-block">
+        <!-- -----  COPYRIGHT   ----- -->
+        <div class="copyright">
+          <p>Copyright © 2024</p>
+        </div>
+        <!-- -----  /COPYRIGHT  ----- -->
+
+        <!-- -----  SOCIAL  ----- -->
+        <div class="social">
+          <ul>
+            <li>
+              <a href="https://www.medium.com/@andriraymond" target="_blank"
+                ><i class="fab fa-medium-m"></i
+              ></a>
+            </li>
+            <li>
+              <a
+                href="https://www.linkedin.com/in/andriraymondo/"
+                target="_blank"
+                ><i class="fab fa-linkedin"></i
+              ></a>
+            </li>
+            <li>
+              <a href="https://www.github.com/andriraymond" target="_blank"
+                ><i class="fab fa-github"></i
+              ></a>
+            </li>
+            <li>
+              <a href="http://www.linktr.ee/andriraymond" target="_blank"
+                ><i class="fa fa-share-alt"></i
+              ></a>
+            </li>
+          </ul>
+        </div>
+        <!-- -----  /SOCIAL ----- -->
+      </div>
+      <!-- -----  /FOOTER ----- -->
+
+      <!-- -----  JAVASCRIPT  ----- -->
+      <script
+        src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+      <script
+        src="https://cdn.jsdelivr.net/npm/popper.js@1.14.7/dist/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+        crossorigin="anonymous"></script>
+      <script
+        src="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+        crossorigin="anonymous"></script>
+      <!-- -----  /JAVASCRIPT ----- -->
+
+      <!-- -----  JQUERY CDN  ----- -->
+      <script
+        src="https://code.jquery.com/jquery-3.6.4.js"
+        integrity="sha256-a9jBBRygX1Bh5lt8GZjXDzyOB+bWve9EiO7tROUtj/E="
+        crossorigin="anonymous"></script>
+      <script src="/js/main.js"></script>
+      <!-- -----  /JQUERY CDN ----- -->
+
+      <!-- -----  MGC CURSOR  ----- -->
+      <!-- <div class="mouse-cursor cursor-outer"></div> -->
+      <!-- <div class="mouse-cursor cursor-inner"></div> -->
+      <!-- -----  /MGC CURSOR ----- -->
     </div>
 
+    <!-- Disable Inspect Element -->
+    <script language="JavaScript">
+      // $(document).bind("contextmenu",function(e) {
+      //     e.preventDefault();
+      // });
+      // $(document).keydown(function(e){
+      //     if(e.ctrlKey && (e.which === 83)){
+      //         e.preventDefault();
+      //         return false;
+      //     }if (e.ctrlKey && e.shiftKey && ( e.which === 73)){
+      //         e.preventDefault();
+      //         return false;
+      //     }
+      // });
+      var message =
+        "Function Disabled! We apologize, but this functionality is currently unavailable on the website";
+      function clickdsb() {
+        if (event.button == 2) {
+          alert(message);
+          return false;
+        }
+      }
+      function clickbsb(e) {
+        if (document.layers || (document.getElementById && !document.all)) {
+          if (e.which == 2 || e.which == 3) {
+            alert(message);
+            return false;
+          }
+        }
+      }
+      if (document.layers) {
+        document.captureEvents(Event.MOUSEDOWN);
+        document.onmousedown = clickbsb;
+      } else if (document.all && !document.getElementById) {
+        document.onmousedown = clickdsb;
+      }
 
-    <!-- <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
-        <div class="carousel-inner">
-            <div class="carousel-item active">
-                <img class="d-block w-100" style="height: auto; ; width: auto; " src="https://azlogistik-live.s3.ap-southeast-3.amazonaws.com/content-bf/assets/promo/Iklan-4-1-03-v2.png" alt="First slide">
-            </div>
-            <div class="carousel-item">
-                <img class="d-block w-100" style="height: auto; ; width: auto;" src="https://azlogistik-live.s3.ap-southeast-3.amazonaws.com/content-bf/assets/promo/Iklan-White-Border-02-v2.png" alt="Second slide">
-            </div>
-            <div class="carousel-item">
-                <img class="d-block w-100" style="height: auto; ; width: auto;" src="https://azlogistik-live.s3.ap-southeast-3.amazonaws.com/content-bf/assets/promo/muatmuat-ads-NEW-01-v4.jpg" alt="Third slide">
-            </div>
-        </div>
-        <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
-            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-            <span class="sr-only">Previous</span>
-        </a>
-        <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
-            <span class="carousel-control-next-icon" aria-hidden="true"></span>
-            <span class="sr-only">Next</span>
-        </a> -->
+      document.oncontextmenu = new Function("alert(message);return false");
 
-        <!-- -----  JAVASCRIPT  ----- -->
-        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.7/dist/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
-        <!-- -----  /JAVASCRIPT ----- -->
-
-        <!-- -----  JQUERY CDN  ----- -->
-        <script src="https://code.jquery.com/jquery-3.6.4.js" integrity="sha256-a9jBBRygX1Bh5lt8GZjXDzyOB+bWve9EiO7tROUtj/E=" crossorigin="anonymous"></script>
-        <script src="/js/main.js"></script>
-        <!-- -----  /JQUERY CDN ----- -->
-
-        <!-- -----  MGC CURSOR  ----- -->
-        <!-- <div class="mouse-cursor cursor-outer"></div> -->
-        <!-- <div class="mouse-cursor cursor-inner"></div> -->
-        <!-- -----  /MGC CURSOR ----- -->
-
-    </div>
-
-        <!-- Disable Inspect Element -->
-        <script language="JavaScript">
-            // $(document).bind("contextmenu",function(e) {
-            //     e.preventDefault();
-            // });
-            // $(document).keydown(function(e){
-            //     if(e.ctrlKey && (e.which === 83)){
-            //         e.preventDefault();
-            //         return false;
-            //     }if (e.ctrlKey && e.shiftKey && ( e.which === 73)){
-            //         e.preventDefault();
-            //         return false;
-            //     }
-            // });
-            var message="Function Disabled! We apologize, but this functionality is currently unavailable on the website";
-            function clickdsb(){
-                if (event.button==2){
-                    alert(message);
-                    return false;
-                }
-            }
-            function clickbsb(e){
-                if (document.layers||document.getElementById&&!document.all){
-                    if (e.which==2||e.which==3){
-                        alert(message);
-                        return false;
-                    }
-                }
-            }
-            if (document.layers){
-                document.captureEvents(Event.MOUSEDOWN);
-                document.onmousedown=clickbsb;
-            }
-            else if (document.all&&!document.getElementById){
-                document.onmousedown=clickdsb;
-            }
-
-            document.oncontextmenu=new Function("alert(message);return false");
-
-            document.addEventListener('keydown', function(e) {
-            // Mendeteksi jika tombol Ctrl dan tombol 'S' ditekan bersamaan
-            if (e.ctrlKey && e.key === 's') {
-                e.preventDefault(); // Mencegah perilaku default dari browser (misalnya: menyimpan halaman)
-            }
-            if (e.ctrlKey && e.key === 'u') {
-                e.preventDefault(); // Mencegah perilaku default dari browser (misalnya: menyimpan halaman)
-            }
-            if (e.ctrlKey && e.shiftKey && e.key === 'J'){
-                // Mencegah perilaku default dari browser
-                // e.preventDefault();
-                // e.stopPropagation();
-            }
-            if (e.ctrlKey && e.shiftKey && e.key === 'I'){
-                // Mencegah perilaku default dari browser
-                e.preventDefault();
-                e.stopPropagation();
-            }
-            if (e.ctrlKey && e.shiftKey && e.key === 'C'){
-                // Mencegah perilaku default dari browser
-                e.preventDefault();
-                e.stopPropagation();
-            }
-            if (e.ctrlKey && e.shiftKey && e.key === 'U'){
-                // Mencegah perilaku default dari browser
-                e.preventDefault();
-                e.stopPropagation();
-            }
-            if (e.ctrlKey && e.key === 'U'){
-                // Mencegah perilaku default dari browser
-                e.preventDefault();
-                e.stopPropagation();
-            }
-
-});
-            </script>
-        <!-- End Disable Inspect Element -->
-
+      document.addEventListener("keydown", function (e) {
+        // Mendeteksi jika tombol Ctrl dan tombol 'S' ditekan bersamaan
+        if (e.ctrlKey && e.key === "s") {
+          e.preventDefault(); // Mencegah perilaku default dari browser (misalnya: menyimpan halaman)
+        }
+        if (e.ctrlKey && e.key === "u") {
+          e.preventDefault(); // Mencegah perilaku default dari browser (misalnya: menyimpan halaman)
+        }
+        if (e.ctrlKey && e.shiftKey && e.key === "J") {
+          // Mencegah perilaku default dari browser
+          e.preventDefault();
+          e.stopPropagation();
+        }
+        if (e.ctrlKey && e.shiftKey && e.key === "I") {
+          // Mencegah perilaku default dari browser
+          e.preventDefault();
+          e.stopPropagation();
+        }
+        if (e.ctrlKey && e.shiftKey && e.key === "C") {
+          // Mencegah perilaku default dari browser
+          e.preventDefault();
+          e.stopPropagation();
+        }
+        if (e.ctrlKey && e.shiftKey && e.key === "U") {
+          // Mencegah perilaku default dari browser
+          e.preventDefault();
+          e.stopPropagation();
+        }
+        if (e.ctrlKey && e.key === "U") {
+          // Mencegah perilaku default dari browser
+          e.preventDefault();
+          e.stopPropagation();
+        }
+      });
+    </script>
+    <!-- End Disable Inspect Element -->
 
     <!-- ----- /ALL CONTENT ----- -->
-    
-</body>
+  </body>
 </html>
