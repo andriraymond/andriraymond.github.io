@@ -1,0 +1,29 @@
+"message": "Get list portfolio successfully",
+    "data": [
+        {
+            "id": "6872934e0985b41477c2cb12",
+            "title": "Personal Portfolio Website",
+            "description": "A responsive personal website built using Next.js, Tailwind CSS, and TypeScript to showcase my projects and skills."
+        },
+        {
+            "id": "6872934e0985b41477c2cb13",
+            "title": "E-Commerce Dashboard",
+            "description": "Admin dashboard for managing products, orders, and users with charts and role-based access control."
+        },
+        {
+            "id": "6872934e0985b41477c2cb14",
+            "title": "Realtime Chat App",
+            "description": "A realtime chat application using Socket.IO, Express.js, and MongoDB with user authentication."
+        },
+        {
+            "id": "6872934e0985b41477c2cb15",
+            "title": "Weather App",
+            "description": "A simple weather app fetching live data from OpenWeatherMap API with responsive UI using Tailwind."
+        },
+        {
+            "id": "6872934e0985b41477c2cb16",
+            "title": "Blog CMS",
+            "description": "A content management system (CMS) for managing blog posts with markdown support and dynamic routing."
+        }
+    ]
+}
