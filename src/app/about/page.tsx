@@ -1,9 +1,9 @@
 'use client';
-import React, { useEffect, useState, useMemo, use } from 'react';
+import React, { useEffect, useState, useMemo } from 'react';
 import '../../app/globals.css';
 
 import AboutContent from '@/src/lib/components/about/AboutContent';
-import BiodataSection, { Biodata } from '@/src/lib/components/about/BiodataSection';
+import { Biodata } from '@/src/lib/components/about/BiodataSection';
 
 interface Skill {
   id: string;
