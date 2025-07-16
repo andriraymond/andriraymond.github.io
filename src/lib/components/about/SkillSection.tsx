@@ -1,18 +1,19 @@
+'use client';
 import React from 'react';
-import '../../../app/globals.css';
 import { Terminal, Zap } from 'lucide-react';
 
-export default function SkillSection({
-  hardSkills,
-  softSkills,
-  loading,
-}: {
+interface Props {
   hardSkills: string[];
   softSkills: string[];
   loading: boolean;
-}) {
+}
+
+export default function SkillSection({ hardSkills, softSkills, loading }: Props) {
+  const maxLength = Math.max(hardSkills.length, softSkills.length);
+
   return (
     <div className="space-y-4">
+      {/* Judul */}
       <div className="flex items-center w-full gap-6 pt-6">
         <span className="text-[16px] text-[#252525] font-semibold tracking-widest uppercase">
           Hard Skill
@@ -24,11 +25,19 @@ export default function SkillSection({
         <div className="flex-grow h-[2px] bg-[#252525]" />
       </div>
 
+      {/* Konten */}
       {loading ? (
-        <div className="flex-1 text-[15px] text-justify leading-relaxed borders p-4 min-h-50">Loading...</div>
+        <div className="grid grid-cols-2 gap-y-2 gap-x-6 p-4 text-[15px] animate-pulse">
+          {Array.from({ length: 4 }).map((_, i) => (
+            <React.Fragment key={i}>
+              <div className="h-4 bg-gray-300 rounded w-3/4" />
+              <div className="h-4 bg-gray-300 rounded w-2/3" />
+            </React.Fragment>
+          ))}
+        </div>
       ) : (
-        <div className="text-[15px] grid p-4 grid-cols-2 gap-y-2 gap-x-6 borders">
-          {Array.from({ length: Math.max(hardSkills.length, softSkills.length) }, (_, i) => (
+        <div className="grid grid-cols-2 gap-y-2 gap-x-6 p-4 text-[15px] border border-gray-200 rounded-md">
+          {Array.from({ length: maxLength }).map((_, i) => (
             <React.Fragment key={i}>
               <div className="flex items-center gap-2">
                 {hardSkills[i] && <Terminal className="w-4 h-4 text-gray-500" />}

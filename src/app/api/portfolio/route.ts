@@ -9,6 +9,8 @@ export async function GET() {
         id: true,
         title: true,
         description: true,
+        imageUrl: true,
+        link: true,
       },
     });
 

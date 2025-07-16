@@ -49,7 +49,8 @@ model Portfolio {
   id            String @id @default(auto()) @map("_id") @db.ObjectId
   title         String
   description   String
-  path          String
+  imageUrl      String
+  link          String
   created_at    DateTime @default(now())
 
   @@map("portfolios")
