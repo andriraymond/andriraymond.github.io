@@ -20,31 +20,50 @@ export default function PortfolioPage() {
   const [experiences, setExperiences] = useState<Experience[]>([]);
   const [loadingExperiences, setLoadingExperiences] = useState(true);
 
+  // useEffect(() => {
+  //   const fetchPortfolios = async () => {
+  //     try {
+  //       const res = await fetch('/api/portfolio');
+  //       const json = await res.json();
+
+  //       // Map manual agar sesuai tipe `Portfolio` dari @prisma/client
+  //       const mapped: Portfolio[] = json.data.map((item: any) => ({
+  //         id: item.id,
+  //         title: item.title,
+  //         description: item.description,
+  //         imageUrl: item.imageUrl ?? item.path ?? '#', // fallback
+  //         link: item.link ?? item.path ?? '#',        // fallback
+  //         created_at: new Date(item.created_at),
+  //       }));
+
+  //       setPortfolios(mapped);
+  //     } catch (err) {
+  //       console.error('Error fetching portfolios:', err);
+  //     } finally {
+  //       setLoadingPortfolios(false);
+  //     }
+  //   };
+  //   fetchPortfolios();
+  // }, []);
   useEffect(() => {
     const fetchPortfolios = async () => {
       try {
         const res = await fetch('/api/portfolio');
         const json = await res.json();
-
-        // Map manual agar sesuai tipe `Portfolio` dari @prisma/client
-        const mapped: Portfolio[] = json.data.map((item: any) => ({
-          id: item.id,
-          title: item.title,
-          description: item.description,
-          imageUrl: item.imageUrl ?? item.path ?? '#', // fallback
-          link: item.link ?? item.path ?? '#',        // fallback
-          created_at: new Date(item.created_at),
-        }));
-
-        setPortfolios(mapped);
-      } catch (err) {
-        console.error('Error fetching portfolios:', err);
+        setPortfolios(json.data as Portfolio[]);
+      } catch (err: unknown) {
+        if (err instanceof Error) {
+          console.error('Error fetching portfolios:', err.message);
+        } else {
+          console.error('Unexpected error:', err);
+        }
       } finally {
         setLoadingPortfolios(false);
       }
     };
     fetchPortfolios();
   }, []);
+
 
   useEffect(() => {
     const fetchCertificates = async () => {
