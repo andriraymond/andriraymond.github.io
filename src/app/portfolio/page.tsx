@@ -100,6 +100,7 @@ export default function PortfolioPage() {
       <ExperienceContent experiences={experiences} loading={loadingExperiences} />
       <PortfolioContent portfolios={portfolios} loading={loadingPortfolios} />
       <CertificateContent certificates={certificates} loading={loadingCertificates} />
+      
     </div>
   );
 }
