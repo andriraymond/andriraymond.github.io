@@ -6,7 +6,8 @@
 
 :root {
   /* --background:whitesmoke; */
-  --background:blue;
+  /* --background:blue; */
+  --foreground: #ededed;
   /* --background: #ffffff; */
   --foreground: #171717;
   --font-sans: 'Poppins', sans-serif;
