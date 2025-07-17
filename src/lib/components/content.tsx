@@ -8,7 +8,8 @@ export default function content(){
       {/* Foto normal */}
       <Image
       // src="https://andriraymond.vercel.app/assets/images/ray-img.png"
-      src="https://andriraymond.vercel.app/assets/images/ray-img.webp"
+      // src="/archive/assets/images/ray-img.webp"
+      src="/ray-img.png"
       alt="Andri Reimondo Tamba"
       fill
       className="object-cover transition-opacity duration-300 opacity-100 hover:opacity-0 border"
@@ -18,7 +19,8 @@ export default function content(){
       {/* Foto saat hover */}
       <Image
       // src="https://www.gravatar.com/avatar/2c7d99fe281ecd3bcd65ab915bac6dd5?s=250"
-      src="https://andriraymond.vercel.app/assets/images/ray-img.webp"
+      // src="/archive/assets/images/ray-img.webp"
+      src="/ray-img.png"
       alt="Andri Reimondo Tamba (hover)"
       fill
       // className="object-cover transition-opacity duration-300 opacity-0 hover:opacity-100 rounded-full"
