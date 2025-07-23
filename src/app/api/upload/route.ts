@@ -1,7 +1,6 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
 import { uploadMedia } from '@/config/cloudinary';
 import formidable from 'formidable';
-import fs from 'fs';
 import os from 'os';
 import path from 'path';
 
