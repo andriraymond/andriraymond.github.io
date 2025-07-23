@@ -40,7 +40,7 @@ export default function AboutContent({
   biodataLoading,
 }: Props) {
   return (
-    <div className="w-full h-full p-4 space-y-6">
+    <div className="w-full h-full p-4 space-y-6 mb-10">
       {/* Section Title */}
       <div className="flex items-center w-full">
         <span className="text-[16px] text-[#252525] font-semibold tracking-widest uppercase mr-4">

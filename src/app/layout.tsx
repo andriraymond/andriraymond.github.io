@@ -13,8 +13,11 @@ const poppins = Poppins({
 });
 
 export const metadata: Metadata = {
-  title: "Portofolio | Andri",
+  title: "Portofolio | Andri Reimondo Tamba",
   description: "Portofolio website",
+  icons: {
+    icon: "/ray-img.png"
+  }
 };
 
 export default function RootLayout({

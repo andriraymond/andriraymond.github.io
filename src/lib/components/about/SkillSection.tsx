@@ -36,7 +36,7 @@ export default function SkillSection({ hardSkills, softSkills, loading }: Props)
           ))}
         </div>
       ) : (
-        <div className="grid grid-cols-2 gap-y-2 gap-x-6 p-4 text-[15px] border border-gray-200 rounded-md">
+        <div className="grid grid-cols-2 gap-y-2 gap-x-6 p-4 text-[15px] borders border-gray-200 rounded-md">
           {Array.from({ length: maxLength }).map((_, i) => (
             <React.Fragment key={i}>
               <div className="flex items-center gap-2">
