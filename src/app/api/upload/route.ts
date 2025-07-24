@@ -14,7 +14,7 @@ export async function POST(req: Request) {
   const data = await req.formData();
   const file = data.get('file') as File;
   const namaFoto = data.get('namaFoto') as string;
-  const userId = parseInt(data.get('UserId') as string);
+
 
   const bytes = await file.arrayBuffer();
   const buffer = Buffer.from(bytes);
