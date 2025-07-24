@@ -79,3 +79,13 @@ model Experience {
 
   @@map("experiences")
 }
+
+
+model Photo {
+    id          String @id @default(auto()) @map("_id") @db.ObjectId
+    name        String
+    path        String
+    create_at   DateTime @default(now())
+
+    @@map("photos")
+}

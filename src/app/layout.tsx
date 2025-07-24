@@ -36,7 +36,8 @@ export default function RootLayout({
           
           {/* content 40% */}
           {/* <div className="flex w-full lg:w-2/5 mx-auto justify-center items-center"> */}
-          <div className="flex w-full lg:w-2/5 justify-center items-center h-[40vh] lg:h-full">
+          {/* <div className="flex w-full lg:w-2/5 justify-center items-center h-[40vh] lg:h-full"> */}
+          <div className="hidden lg:flex w-full lg:w-2/5 justify-center items-center h-[40vh] lg:h-full">
             <Content />
           </div>
 
@@ -45,7 +46,8 @@ export default function RootLayout({
           {/* <div className="flex w-full lg:w-3/5 justify-center items-start h-[60vh] lg:h-full overflow-y-auto p-6">
             {children}
           </div> */}
-          <div className="w-full lg:w-3/5 h-full overflow-y-auto">
+          {/* <div className="w-full lg:w-3/5 h-full overflow-y-auto"> */}
+          <div className="flex flex-col lg:flex-row">
             <div className="flex justify-center items-center min-h-full p-6">
               {children}
             </div>
