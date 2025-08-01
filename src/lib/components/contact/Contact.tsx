@@ -24,6 +24,10 @@ export default function Contact() {
     fetchBiodata();
   }, []);
 
+  const Skeleton = () => (
+    <div className="w-32 h-4 bg-gray-100 animate-pulse rounded" />
+  );
+
   return (
     <div className="w-full h-full p-4 space-y-4">
       <div className="flex items-center w-full">
@@ -36,15 +40,30 @@ export default function Contact() {
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
         <div className="bg-white border p-4 shadow-md bg-gradient-to-r flex flex-col justify-center items-center gap-2 p-6">
           <MapPin className="w-5 h-5 text-[#252525]" />
-          <p className="text-sm text-[#252525]">{biodata?.address || 'Loading...'}</p>
+          {/* <p className="text-sm text-[#252525]">{biodata?.address || 'Loading...'}</p> */}
+          {biodata?.address ? (
+            <p className="text-sm text-[#252525]">{biodata.address}</p>
+          ) : (
+            <Skeleton />
+          )}
         </div>
         <div className="bg-white border p-4 shadow-md bg-gradient-to-r flex flex-col justify-center items-center gap-2 p-6">
           <Mail className="w-5 h-5 text-[#252525]" />
-          <p className="text-sm text-[#252525]">{biodata?.email || 'Loading...'}</p>
+          {/* <p className="text-sm text-[#252525]">{biodata?.email || 'Loading...'}</p> */}
+          {biodata?.email ? (
+            <p className="text-sm text-[#252525]">{biodata.email}</p>
+          ) : (
+            <Skeleton />
+          )}
         </div>
         <div className="bg-white border p-4 shadow-md bg-gradient-to-r flex flex-col justify-center items-center gap-2 p-6">
           <Phone className="w-5 h-5 text-[#252525]" />
-          <p className="text-sm text-[#252525]">{biodata?.phone || 'Loading...'}</p>
+          {/* <p className="text-sm text-[#252525]">{biodata?.phone || 'Loading...'}</p> */}
+          {biodata?.phone ? (
+            <p className="text-sm text-[#252525]">{biodata.phone}</p>
+          ) : (
+            <Skeleton />
+          )}
         </div>
       </div>
     </div>

@@ -25,12 +25,33 @@ export default function ExperienceContent({
     const start = new Date(startStr);
     const isPresent = endStr.toLowerCase() === 'present';
     const end = isPresent ? new Date() : new Date(endStr);
+
     const format = (d: Date) =>
       new Intl.DateTimeFormat('en-US', {
         month: 'short',
         year: 'numeric',
       }).format(d);
-    return `${format(start)} – ${isPresent ? 'Present' : format(end)}`;
+
+        const formattedStart = format(start);
+        const formattedEnd = isPresent ? 'Present' : format(end);
+
+        // Hitung total bulan
+        const monthsTotal =
+        (end.getFullYear() - start.getFullYear()) * 12 +
+      (end.getMonth() - start.getMonth());
+
+    const years = Math.floor(monthsTotal / 12);
+    const months = monthsTotal % 12;
+
+    const parts: string[] = [];
+    if (years > 0) parts.push(`${years} yr${years > 1 ? 's' : ''}`);
+    if (months > 0) parts.push(`${months} mo${months > 1 ? 's' : ''}`);
+
+    const duration = parts.length > 0 ? ` · ${parts.join(' ')}` : '';
+
+    return `${formattedStart} – ${formattedEnd}${duration}`;
+
+//     return `${format(start)} – ${isPresent ? 'Present' : format(end)}`;
   };
 
   const skeletonCount = experiences.length || 4;
