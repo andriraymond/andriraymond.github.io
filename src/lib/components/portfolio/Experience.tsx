@@ -41,7 +41,7 @@ export default function ExperienceContent({
       (end.getMonth() - start.getMonth());
 
     const years = Math.floor(monthsTotal / 12);
-    const months = monthsTotal % 12;
+    const months = (monthsTotal % 12) + 1;
 
     const parts: string[] = [];
     if (years > 0) parts.push(`${years} yr${years > 1 ? 's' : ''}`);
