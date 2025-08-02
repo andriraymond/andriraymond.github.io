@@ -12,6 +12,7 @@
   --foreground: #171717;
   --font-sans: 'Poppins', sans-serif;
 }
+
 /* 
 @theme inline {
   --color-background: var(--background);
@@ -24,7 +25,7 @@
   :root {
     /* --background: #0a0a0a;
     --foreground: #ededed; */
-    --background:whitesmoke;
+    --background: whitesmoke;
     --foreground: #ededed;
   }
 }
@@ -51,4 +52,12 @@ body {
 
 .uppercase {
   letter-spacing: 6px;
+}
+
+
+/* MEDIA QUERY */
+@media (max-width: 430px) {
+  .phone-view {
+    height: 0px;
+  }
 }
